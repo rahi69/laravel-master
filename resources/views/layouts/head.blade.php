@@ -29,8 +29,8 @@ waterstones.com" >
     <link href="{{asset('css/bundle.css')}}" media="all" rel="stylesheet" type="text/css" >
     <link href="{{asset('css/print.css')}}" media="print" rel="stylesheet" type="text/css" >
 
-    {{--<link href="https://static.waterstones.com/1.5.40/css/bundle.css" media="all" rel="stylesheet" type="text/css" >--}}
-    {{--<link href="https://static.waterstones.com/1.5.40/css/print.css" media="print" rel="stylesheet" type="text/css" >--}}
+    {{-- <link href="https://static.waterstones.com/1.5.40/css/bundle.css" media="all" rel="stylesheet" type="text/css" >--}}
+     {{--<link href="https://static.waterstones.com/1.5.40/css/print.css" media="print" rel="stylesheet" type="text/css" >--}}
 
     <!--[if lt IE 9]>
     <!--<script src="https://static.waterstones.com/1.5.40/js/html5shiv.js"></script>-->
@@ -40,9 +40,9 @@ waterstones.com" >
     {{--<script type="text/javascript" src="https://static.waterstones.com/1.5.40/js/bundle.js"></script>--}}
     {{--<script type="text/javascript" src="https://static.waterstones.com/1.5.40/js/ecommerce.js"></script>--}}
 
-    <!--[if lte IE 9]>
-    <!--<script src="https://static.waterstones.com/1.5.40/js/jquery.placeholder.js"></script>-->
-    <![endif]-->
+    <!--[if lte IE 9]-->
+    <script src="{{asset('js/placeholder.js')}}"></script>
+    <!--[endif]-->
 
 
 
