@@ -17,6 +17,7 @@ class CreateFavoritesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id')->index()->unsigned();
             $table->boolean('favorite');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

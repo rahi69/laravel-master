@@ -20,6 +20,7 @@ class CreateCommentsTable extends Migration
             $table->integer('parent_id')->unsigned()->default(0);
             $table->text('description');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

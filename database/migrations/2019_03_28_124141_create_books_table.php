@@ -18,12 +18,15 @@ class CreateBooksTable extends Migration
             $table->integer('user_id')->index()->unsigned();
             $table->string('name',255);
             $table->string('e_name',255);
+            $table->string('author',255);
+            $table->string('publisher',255);
             $table->string('speaker',255);
             $table->text('description');
             $table->text('review')->nullable();
             $table->bigInteger('isbn');
             $table->string('path',255)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
