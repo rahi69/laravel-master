@@ -3,7 +3,7 @@
         <div class="row">
             <div class="right-menu span7 tablet-span6 mobile-span12">
                 <ul>
-                    <li class="nav-account"><a href="/signin?ov=1&continue=/">Sign In / Register</a></li>
+                    <li class="nav-account"><a href="#" data-modal-id="loginModal" class="js-open-modal"  >Sign In / Register</a></li>
                     <li class="nav-plus"><a href="/plus"></a></li>
                     <li class="nav-wish-lists"><a href="/account/lists" >Wish list</a></li>
                 </ul>

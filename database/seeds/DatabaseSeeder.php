@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::reguard();
         $this->call(UsersTableSeeder::class);
+        $this->call(CategoriesTableSeeder::class);
         $this->call(BooksTableSeeder::class);
         $this->call(RolesTableSeeder::class);
         $this->call(RatingsTableSeeder::class);
@@ -21,7 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(FilesTableSeeder::class);
         $this->call(FavoritesTableSeeder::class);
         $this->call(CommentsTableSeeder::class);
-        $this->call(CategoriesTableSeeder::class);
+
         Model::reguard();
         // $this->call(UsersTableSeeder::class);
     }

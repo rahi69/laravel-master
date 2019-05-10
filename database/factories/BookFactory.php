@@ -14,6 +14,8 @@ $factory->define(App\Book::class, function (Faker $faker) {
         'review'=>$faker->text(20),
         'isbn'=>$faker->numberBetween(1,200),
         'path'=>$faker->text(10),
+        'category_id'=>random_int(\DB::table('categories')->min('id'), \DB::table('categories')->max('id')),
+        'price'=>$faker->numberBetween(20000,180000),
         //
     ];
 });

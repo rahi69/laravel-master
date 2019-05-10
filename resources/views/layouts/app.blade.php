@@ -32,18 +32,40 @@
 
 
 
-            <form method="post" action="/signin" class="row ajax-login" novalidate>
-                <input type="hidden" name="token" value="13c338c6255dbb45bf86a03d7f0909d4"/>
+            <form method="post"  id="login" action="{{url('/login')}}" class="row " >
+               {{-- <input type="hidden" name="token" value="13c338c6255dbb45bf86a03d7f0909d4"/>
 
-                <input type="hidden" name="continue" value="/"/>
+                <input type="hidden" name="continue" value="/"/>--}}
+                {{ csrf_field() }}
+               {{-- <div >
+                    @if ($errors->has('error_login'))
+                        <span style="color:red;font-size:13px;padding-right:10px;" class="help-block">
+                                          {{ $errors->first('error_login') }}
+                                    </span>
+                    @endif
+                </div>--}}
+                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}" style="margin-top: 16px;">
 
-                <input class="input input-large" type="email" name="email" placeholder="Email address"/>
-                <input class="input input-large" type="password" autocomplete="off" name="password" placeholder="Password"/>
+                <input class="input input-large form-control" type="email" name="email" placeholder="Email address" id="email" value="{{ old('email') }}"/>
+                @if ($errors->has('email'))
+                    <span style="color:red" class="help-block">
+                            {{ $errors->first('email') }}
+                        </span>
+                @endif
+                </div>
+                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}" style="margin-top: 16px;">
+                <input class="input input-large form-group" type="password" id="password"  name="password" placeholder="Password" value="{{ old('password') }}"/>
+                    @if ($errors->has('password'))
+                        <span style="color:red" class="help-block">
+                {{ $errors->first('password') }}
+                </span>
+                    @endif
+                </div>
                 <div class="captcha-box" style="float: left;margin-bottom: 10px;">
                     <div id="g-recaptcha-modal" class="g-recaptcha-modal" data-sitekey="6LevjSUTAAAAAHZ7bHMXpeebahJ4HTnlcPc-XVD6"></div>
                     <script src='https://www.google.com/recaptcha/api.js'></script>
                 </div>
-                <label class="login-error input-error"></label>
+               {{--<label class="login-error input-error"></label>--}}
 
                 <div class="span12 alpha omega submit-wrapper">
                     <div class="submit-wrapper-fields span7 alpha">
@@ -58,10 +80,18 @@
                         <a href="/reset" class="forgot-pass">Forgotten password?</a>
 
                     </div>
-                    <button class="button button-large button-teal">Sign in</button>
+                    <button type="submit" class="button button-large button-teal">Sign in</button>
                 </div>
 
             </form>
+            @if(count($errors)>0)
+
+                    <script>
+                        $('#login').modal('show');
+                    </script>
+
+            @endif
+
 
         </div>
 
@@ -102,7 +132,7 @@
 
 
 
-<div id="loginValidModal" class="modal-box">
+{{--<div id="loginValidModal" class="modal-box">
     <header>
         <a href="#" class="js-modal-close close">×</a>
         <h3>Sign In</h3>
@@ -171,7 +201,7 @@
         </div>
 
     </div>
-</div>
+</div>--}}
 
 
 <div id="collectModal" class="modal-box">

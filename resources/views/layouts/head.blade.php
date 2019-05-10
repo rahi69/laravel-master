@@ -61,6 +61,6 @@ waterstones.com" >
           href="https://static.waterstones.com/1.5.40/img/apple-touch-icon-180x180-precomposed.png">
 
     <link rel="publisher" href="https://plus.google.com/104518605237134368274">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
