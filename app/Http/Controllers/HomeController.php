@@ -10,7 +10,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-//        $c_books=Category::where('parent_id','=','2')->first();
 
         $child_books=Book::where('category_id',3)
             ->orWhere('category_id',8)

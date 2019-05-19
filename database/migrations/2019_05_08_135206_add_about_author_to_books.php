@@ -15,6 +15,7 @@ class AddAboutAuthorToBooks extends Migration
     {
         Schema::table('books', function (Blueprint $table) {
             $table->text('about_author');
+
         });
     }
 

@@ -15,6 +15,7 @@ class AddTimeToBooks extends Migration
     {
         Schema::table('books', function (Blueprint $table) {
             $table->smallInteger('time')->unsigned();
+
         });
     }
 
@@ -27,6 +28,7 @@ class AddTimeToBooks extends Migration
     {
         Schema::table('books', function (Blueprint $table) {
             $table->dropColumn('time');
+
         });
     }
 }
