@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $c_books=Category::where('parent_id','=','2')->first();
+//        $c_books=Category::where('parent_id','=','2')->first();
 
         $child_books=Book::where('category_id',3)
             ->orWhere('category_id',8)
@@ -35,6 +35,15 @@ class HomeController extends Controller
 
 //        return response()->json($child_books);
 
-        return view('layouts.app',compact('child_books','novel_books','psychology_books','poetry_books','scientific_books','upload'));
+        return view('layouts.app2',compact('child_books','novel_books','psychology_books','poetry_books','scientific_books','upload'));
+    }
+
+    public function show($id)
+    {
+        $book = Book::findOrFail($id);
+        $upload='http://localhost';
+
+        return view('layouts.detail',compact('book','upload'));
+//        return view('t',compact('book','upload'));
     }
 }

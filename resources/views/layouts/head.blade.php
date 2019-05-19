@@ -25,6 +25,8 @@ waterstones.com" >
 
 
     <title>Buy books, stationery and gifts, online and in store | Waterstones</title>
+    @yield('title')
+
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <link href="{{asset('css/bundle.css')}}" media="all" rel="stylesheet" type="text/css" >
     <link href="{{asset('css/print.css')}}" media="print" rel="stylesheet" type="text/css" >
@@ -37,6 +39,8 @@ waterstones.com" >
     <!--[if lt IE 9]>
     <!--<script src="https://static.waterstones.com/1.5.40/js/html5shiv.js"></script>-->
     <![endif]-->
+    {{--<script src={{asset("js/jquery.js")}}></script>--}}
+
     <script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/bundle.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/ecommerce.js')}}"></script>

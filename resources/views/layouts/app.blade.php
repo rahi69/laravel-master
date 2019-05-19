@@ -8,7 +8,6 @@
 <div class="main-container">
 @include('layouts.header')
 @include('layouts.script3')
-
     <div class="main-page home-page" id="pagesmain">
         <div class="row home-row">
         </div>
@@ -19,8 +18,8 @@
     </div>
 
 
-
         @include('layouts.footer')
+
 <div id="loginModal" class="modal-box">
     <header>
         <a href="#" class="js-modal-close close">×</a>
@@ -28,7 +27,7 @@
     </header>
     <div class="modal-body">
         <div class="login-area">
-            <span class="register-here">Not registered? <a href="/registration" class="default-link">CREATE AN ACCOUNT</a><a href="/plus" class="plus-link">CREATE A <span class="inline-plus">plus</span> ACCOUNT</a></span>
+            <span class="register-here">Not registered? <a href="/register" class="default-link">CREATE AN ACCOUNT</a><a href="/plus" class="plus-link">CREATE A <span class="inline-plus">plus</span> ACCOUNT</a></span>
 
 
 
@@ -84,14 +83,13 @@
                 </div>
 
             </form>
-            @if(count($errors)>0)
 
-                    <script>
-                        $('#login').modal('show');
-                    </script>
 
-            @endif
+            {{--@if(count($errors)>0)--}}
 
+
+
+            {{--@endif--}}
 
         </div>
 
@@ -107,9 +105,9 @@
                 </div>
 
                 <div class="span12 alpha omega contained-width-fields">
-                    <div class="invisible right floater">
+                    <div class="invisible right floater">ster
                         <button type="submit" class="button button-large button-teal">Submit</button>
-                    </div>
+                    </div>g
 
                     <div class="input-wrapper">
                         <input type="email" name="email" class="input input-large" placeholder="Email address" required />
@@ -320,9 +318,12 @@
     </div>
 </div>
 
+    {{--<script src={{url("../../../js/bundles/jquery.js")}}></script>--}}
+
+    {{--<script src={{asset("js/jquery.js")}}></script>--}}
 
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1fd17811e3","applicationID":"15896488","transactionName":"MQdTNRBYXUNZAURbVghNchQRTVxdFwteVlweTVgPBlxL","queueTime":0,"applicationTime":146,"atts":"HUBEQ1hCEUVLB0JtWAEHXxU9SkdCUQxXEANEL14bC1VfUWRNBRwJRkpmCAxdXEdLQn5mGVdSH1FZGWR\/b1QECRkUFAtXVxcDGRglVVFSCT4eU1IIAwAJUgESfw8QVAcNQW8fDlceAhtKQFMOFmZXVUwHU0ZcAkALQyxWERwaEVVBSg8NXz4LXREKGgtCRw0SBURRAU1YAFcSAERaAg5FBlZRVgANQBwQUBY9UAUGS1ZDS0AKEAheWh9TUgEdBQ9MBQYbSkBDBBNMVkNMPUVAUERYEz1NG04cGgMSCEIbHw==","errorBeacon":"bam.nr-data.net","agent":""}</script>
 </div>
-</body>
 
+</body>
 </html>

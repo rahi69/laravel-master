@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-
-
-
 <html class="no-js no-touch registration-page" lang="en"> <!--<![endif]-->
 @include('layouts.head')
 

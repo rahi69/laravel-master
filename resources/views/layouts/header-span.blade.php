@@ -1,4 +1,3 @@
-{{--@extends('layouts.app')--}}
 @section('css')
     <link rel="stylesheet" href="../dist/css/swiper.min.css">
 @stop
@@ -27,8 +26,11 @@
                                     @if(empty($child_book->photos[0]))
                                         {{"empty"}}
                                     @else
-                                        <a href="/book/the-western-wind/samantha-harvey/9781784708030">
-                                            {{--<img src='/images/cover404.png' data-src="https://cdn.waterstones.com/override/v3/large/9781/5098/9781509858637.jpg" alt="This is Going to Hurt" class="swiper-lazy" onerror="this.src='/images/cover404.png'">--}}
+                                        {{--<a href="/book/the-western-wind/samantha-harvey/9781784708030">--}}
+                                        {{--<a href="/book/{{$child_book->name}}/{{$child_book->id}}">--}}
+                                        <a href="/book/{{$child_book->id}}">
+
+                                        {{--<img src='/images/cover404.png' data-src="https://cdn.waterstones.com/override/v3/large/9781/5098/9781509858637.jpg" alt="This is Going to Hurt" class="swiper-lazy" onerror="this.src='/images/cover404.png'">--}}
 
                                             <img src="{{$upload}}/{{$child_book->photos[0]->file}}"  alt="{{$child_book->name}}">
                                             @endif
@@ -110,7 +112,11 @@
                                     @if(empty($novel_book->photos[0]))
                                         {{"empty"}}
                                     @else
-                                        <a href="/book/the-western-wind/samantha-harvey/9781784708030">
+                                        {{--<a href="/book/the-western-wind/samantha-harvey/9781784708030">--}}
+                                        {{--<a href="/book/{{$novel_book->name}}/{{$novel_book->id}}">--}}
+                                            <a href="/book/{{$novel_book->id}}">
+
+
                                             {{--<img src='/images/cover404.png' data-src="https://cdn.waterstones.com/override/v3/large/9781/5098/9781509858637.jpg" alt="This is Going to Hurt" class="swiper-lazy" onerror="this.src='/images/cover404.png'">--}}
 
                                             <img src="{{$upload}}/{{$novel_book->photos[0]->file}}"  alt="{{$novel_book->name}}">
@@ -193,8 +199,11 @@
                                     @if(empty($psychology_book->photos[0]))
                                         {{"empty"}}
                                     @else
-                                        <a href="/book/the-western-wind/samantha-harvey/9781784708030">
-                                            {{--<img src='/images/cover404.png' data-src="https://cdn.waterstones.com/override/v3/large/9781/5098/9781509858637.jpg" alt="This is Going to Hurt" class="swiper-lazy" onerror="this.src='/images/cover404.png'">--}}
+                                        {{--<a href="/book/the-western-wind/samantha-harvey/9781784708030">--}}
+                                        {{--<a href="/book/{{$psychology_book->name}}/{{$psychology_book->id}}">--}}
+                                        <a href="/book/{{$psychology_book->id}}">
+
+                                        {{--<img src='/images/cover404.png' data-src="https://cdn.waterstones.com/override/v3/large/9781/5098/9781509858637.jpg" alt="This is Going to Hurt" class="swiper-lazy" onerror="this.src='/images/cover404.png'">--}}
 
                                             <img src="{{$upload}}/{{$psychology_book->photos[0]->file}}"  alt="{{$psychology_book->name}}">
                                             @endif
@@ -276,7 +285,10 @@
                                     @if(empty($poetry_book->photos[0]))
                                         {{"empty"}}
                                     @else
-                                        <a href="/book/the-western-wind/samantha-harvey/9781784708030">
+                                        {{--<a href="/book/the-western-wind/samantha-harvey/9781784708030">--}}
+                                            {{--<a href="/book/{{$poetry_book->name}}/{{$poetry_book->id}}">--}}
+                                        <a href="/book/{{$poetry_book->id}}">
+
                                             {{--<img src='/images/cover404.png' data-src="https://cdn.waterstones.com/override/v3/large/9781/5098/9781509858637.jpg" alt="This is Going to Hurt" class="swiper-lazy" onerror="this.src='/images/cover404.png'">--}}
 
                                             <img src="{{$upload}}/{{$poetry_book->photos[0]->file}}"  alt="{{$poetry_book->name}}">
@@ -359,8 +371,9 @@
                                     @if(empty($scientific_book->photos[0]))
                                         {{"empty"}}
                                     @else
-                                        <a href="/book/the-western-wind/samantha-harvey/9781784708030">
-                                            {{--<img src='/images/cover404.png' data-src="https://cdn.waterstones.com/override/v3/large/9781/5098/9781509858637.jpg" alt="This is Going to Hurt" class="swiper-lazy" onerror="this.src='/images/cover404.png'">--}}
+                                        {{--<a href="/book/the-western-wind/samantha-harvey/9781784708030">--}}
+                                        {{--<a href="/book/{{$scientific_book->name}}/{{$scientific_book->id}}">--}}
+                                        <a href="/book/{{$scientific_book->id}}">
 
                                             <img src="{{$upload}}/{{$scientific_book->photos[0]->file}}"  alt="{{$scientific_book->name}}">
                                             @endif
